@@ -1,0 +1,24 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
+class ThingFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            "name"=>Str::random(10),
+            "description"=>Str::random(20),
+            "wrnt"=>('10.12.2022'),
+            "user_id"=>1,
+        ];
+    }
+}
